@@ -87,6 +87,41 @@ export class GuiModel {
                         }
                     ]
                 },
+                {
+                    "id": "BeerForm",
+                    "title": { default: "Bier" },
+                    "url": "/beer",
+                    "formFieldList": [
+                        {
+                            "id":   "title",
+                            "type": "text",
+                            "name": { default: "Titel" },
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "recipe",
+                            "type": "text",
+                            "name": { default: "Rezept" },
+                            "newRow": true,
+                            "maxLength": 4000,
+                            "height": 4,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
             ],
             "pageList": [
                 {
@@ -106,6 +141,14 @@ export class GuiModel {
                             "page": "toDoPage",
                             "width": 2,
                             "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Bier" },
+                            "icon": "fa-glass",
+                            "color": "yellow",
+                            "page": "beerPage",
+                            "width": 2,
                         },
                     ]
                 },
@@ -134,6 +177,35 @@ export class GuiModel {
                             "url": "/todo",
                             "form": {
                                 "form": "ToDoForm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "beerPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Neues Bier"},
+                            "icon": "fa-pen",
+                            "color": "green",
+                            "width": 2,
+                            "form" : {
+                                "form" : "BeerForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "name": "Bier",
+                            "icon": "fa-glas",
+                            "color": "wet-asphalt",
+                            "search": true,
+                            "url": "/beer",
+                            "form": {
+                                "form": "BeerForm"
                             }
                         }
                     ]
