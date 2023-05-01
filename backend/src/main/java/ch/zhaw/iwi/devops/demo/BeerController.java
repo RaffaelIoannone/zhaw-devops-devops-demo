@@ -21,15 +21,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BeerController {
 
-    private Map<Integer, Beer> beers = new HashMap<Integer, Beer>();
+    private Map<Integer, Beer> beers = new HashMap<>();
+
+    
 
     @EventListener(ApplicationReadyEvent.class)
     public void init() {
-        this.beers.put(1,new Beer(1, "Lager", "Wasser Hopfen Malz"));
-        this.beers.put(2,new Beer(2, "IPA", "Wasser Hopfen Malz"));
-        this.beers.put(3,new Beer(3, "Pale Ale", "Wasser Hopfen Malz"));
-        this.beers.put(4,new Beer(4, "Weizen", "Wasser Hopfen Malz"));
-        this.beers.put(5,new Beer(5, "Triple", "Wasser Hopfen Malz"));
+        final String recipe = "Wasser Hopfen Malz";
+        this.beers.put(1,new Beer(1, "Lager", recipe));
+        this.beers.put(2,new Beer(2, "IPA", recipe));
+        this.beers.put(3,new Beer(3, "Pale Ale", recipe));
+        this.beers.put(4,new Beer(4, "Weizen", recipe));
+        this.beers.put(5,new Beer(5, "Triple", recipe));
         System.out.println("Init Data");
     }
 
