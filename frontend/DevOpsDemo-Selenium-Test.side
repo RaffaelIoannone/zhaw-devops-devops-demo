@@ -1,0 +1,131 @@
+{
+  "id": "25d05cbd-614d-4576-83b5-913b591341eb",
+  "version": "2.0",
+  "name": "DevOpsDemo",
+  "url": "http://localhost:4200",
+  "tests": [{
+    "id": "f43f41c1-1458-4149-af3c-803da1a978fb",
+    "name": "Check the page title",
+    "commands": [{
+      "id": "89183e4a-0b58-4ed7-9f48-1145c8962b8c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58ec4fd1-ede3-479c-9adc-42ba918d1633",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "562e5847-99f0-4642-a93f-04e658d7aa5b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-glass",
+      "targets": [
+        ["css=.fa-glass", "css:finder"],
+        ["xpath=//span[2]/span/span/path-button-group/span/div/span/span/path-button/a/div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2be1ebe-8298-4e2e-b22a-5367b7896840",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.breadcrumb-item",
+      "targets": [
+        ["css=span:nth-child(6) .h4:nth-child(1)", "css:finder"],
+        ["xpath=//span[6]/path-button-group/span/div/span/span/path-button/a/div/div", "xpath:position"]
+      ],
+      "value": "Bier"
+    }]
+  }, {
+    "id": "d1c05e3f-3920-4929-beb6-cb8965737f40",
+    "name": "Check main page options",
+    "commands": [{
+      "id": "92ea0c52-863a-4954-9520-501c995ad6a1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31098773-5882-4166-84b1-c0590510afdb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d533e503-18db-4664-b7dc-05e97ee1bc69",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.tile-yellow > .h4",
+      "targets": [
+        ["css=.tile-yellow > .h4", "css:finder"],
+        ["xpath=//span[2]/span/span/path-button-group/span/div/span/span/path-button/a/div/div", "xpath:position"]
+      ],
+      "value": "Bier"
+    }]
+  }, {
+    "id": "b3ae400e-0343-4b73-80ed-d929794d19a0",
+    "name": "Verify that the back button works",
+    "commands": [{
+      "id": "4286ca9c-3ddc-4895-a322-ad5838407a6e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f026e3b2-0cf6-4ced-9a52-1b5e78c9e870",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x693",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1a82aed-6ff3-4667-b1ce-5d744978c8f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-glass",
+      "targets": [
+        ["css=.fa-glass", "css:finder"],
+        ["xpath=//span[2]/span/span/path-button-group/span/div/span/span/path-button/a/div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5af9e33-7791-4bbb-bbaa-56517c55e66f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.backbutton > .h4",
+      "targets": [
+        ["css=.backbutton > .h4", "css:finder"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bfb1bd5-ad99-41b9-a89a-ee5b5ff31f56",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.breadcrumb-item",
+      "targets": [
+        ["css=.tile-yellow > .h4", "css:finder"],
+        ["xpath=//span[2]/span/span/path-button-group/span/div/span/span/path-button/a/div/div", "xpath:position"]
+      ],
+      "value": "Hauptmenü"
+    }]
+  }],
+  "suites": [{
+    "id": "af771f6d-f683-4291-a782-7f4a06162af1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f43f41c1-1458-4149-af3c-803da1a978fb"]
+  }],
+  "urls": ["http://localhost:4200/"],
+  "plugins": []
+}
