@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-public class BeerTest {
+class BeerTest {
 
     @Test
-    public void testBeer() {
+    void testBeer() {
         var beer = new Beer(42, "TestBeer", "Water");
         beer.setId(42);
         assertEquals("TestBeer", beer.getTitle());
