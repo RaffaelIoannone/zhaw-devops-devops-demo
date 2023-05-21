@@ -14,5 +14,14 @@ class BeerTest {
         assertEquals("Water", beer.getRecipe());
         assertEquals(42, beer.getId());
     }
+
+    @Test
+    void testEmptyBeer() {
+        var beer = new Beer();
+        beer.setId(69);
+        assertEquals(null, beer.getTitle());
+        assertEquals(null, beer.getRecipe());
+        assertEquals(69, beer.getId());
+    }
     
 }
