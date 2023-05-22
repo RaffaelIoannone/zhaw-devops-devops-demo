@@ -22,7 +22,6 @@ class BeerControllerTest {
         assertEquals(1, controller.beer().size());
         controller.deleteBeer(1);
         assertEquals(0, controller.beer().size());
-
     }
 
 }
