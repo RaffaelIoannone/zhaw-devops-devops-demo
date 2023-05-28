@@ -158,6 +158,14 @@ export class GuiModel {
                             "page": "winePage",
                             "width": 2,
                         },
+                        {
+                            "type": "button",
+                            "name": { default: "Schnaps" },
+                            "icon": "fa-glass",
+                            "color": "yellow",
+                            "page": "boozePage",
+                            "width": 2,
+                        },
                     ]
                 },
                 {
@@ -191,6 +199,14 @@ export class GuiModel {
                 },
                 {
                     "id": "winePage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        }
+                    ]
+                },
+                {
+                    "id": "boozePage",
                     "elementList": [
                         {
                             "type": "backbutton",
