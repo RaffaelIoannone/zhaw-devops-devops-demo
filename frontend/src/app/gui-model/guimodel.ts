@@ -150,6 +150,14 @@ export class GuiModel {
                             "page": "beerPage",
                             "width": 2,
                         },
+                        {
+                            "type": "button",
+                            "name": { default: "Wein" },
+                            "icon": "fa-glass",
+                            "color": "yellow",
+                            "page": "winePage",
+                            "width": 2,
+                        },
                     ]
                 },
                 {
@@ -178,6 +186,14 @@ export class GuiModel {
                             "form": {
                                 "form": "ToDoForm"
                             }
+                        }
+                    ]
+                },
+                {
+                    "id": "winePage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
                         }
                     ]
                 },
